@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css~boot strap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css~boot strap/style.css">
+    <title>Learn</title>
+</head>
+<body class="position-relative">
+
+<header class="p-3">
+    <h1 class="text-white text-center">Manager products</h1>
+    <div>
+        <h5 class="text-center text-capitalize">The Developer : Mustafa Ahmed</h5>
+        <a href="https://www.facebook.com/MustafaAHMED317?locale=ar_AR" class="d-block text-center"><i class="fa-brands fa-facebook text-white fs-4"></i></a>
+    </div>
+</header>
+
+
+
+    <main>
+
+        <section>
+
+            <div class="p-3">
+                <input type="text" placeholder="Name product" id="name_Product" class="form-control border-success mb-3 text-center">
+                <input type="text" placeholder="Category" id="category_Product" class="form-control border-success text-center">
+            </div>
+
+            <div class="d-flex p-2 justify-content-center">
+                <input type="number" placeholder="Write First the Price(LE)" id="price_Product" class="m-2 form-control text-center" oninput="totale()">
+                <input type="number" placeholder="Ads(LE)" id="ads_Product" class="m-2 form-control text-center" oninput="totale()">
+                <input type="number" placeholder="Taxes(LE)" id="taxes_Product" class="m-2 form-control text-center" oninput="totale()">
+                <input type="number" placeholder="Discount(LE)" id="discount_Product" class="m-2 form-control text-center" oninput="totale()">
+                <div class="totle" id="totale_Product"></div>
+            </div>
+
+            <div class="p-3">
+                <input type="number" placeholder="Count the products" id="count_Product"  class="form-control text-center">
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-outline-info w-100" onclick="creat_Data()" id="add_Product">Add product</button>
+                <button class="btn btn-outline-warning w-100" id="btn_Update" onclick="update_Info()">Update</button>
+            </div>
+
+            <div class="mb-3 p-2 d-flex justify-content-center">
+                <input  class="form-control border-success bg-white text-center w-50" placeholder="Search By Name" type="text"  id="search" oninput="search_Product(this.value)">
+            </div>
+
+
+
+        </section>
+
+        <div class="mb-3  d-flex justify-content-center">
+            <button class="btn btn-danger  w-75" id="clear_All" onclick="clearAllProducts()"></button>
+        </div>
+
+        <section>
+            <table class="table table-striped text-center">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Count</th>
+                        <th class="bg-success text-white">Price</th>
+                        <th>Discount</th>
+                        <th>Ads</th>
+                        <th>Taxes</th>
+                        <th class="bg-success text-white">Totle</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="Test.min.js"></script>    
+</body>
+</html>

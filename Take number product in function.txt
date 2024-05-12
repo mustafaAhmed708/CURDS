@@ -1,0 +1,10 @@
+var prompet1 = window.prompt("Enter price number")
+var prompet2 = window.prompt("Enter ads number") 
+var prompet3 = window.prompt("Enter taxes number") 
+function buyer (price , ads , taxes)
+{
+    var way1 = price+ads;
+    var way2 = way1 * (taxes/100);
+    window.alert(way2);
+}
+buyer(prompet1 , prompet2 , prompet3);
